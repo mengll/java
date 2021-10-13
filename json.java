@@ -119,6 +119,10 @@ public class ParseJson {
         Goo g = new Goo();
         g.show = "asa";
         g.thisa = "7809";
+        
+        // json filter
+                        SerializeFilter[] serializeFilters = {vf};
+                String s = JSON.toJSONString(media, SerializeConfig.getGlobalInstance(),serializeFilters,  SerializerFeature.valueOf("WriteMapNullValue"),SerializerFeature.valueOf("QuoteFieldNames"));
       
       
         // 添加过滤修改编译后的数据名称
